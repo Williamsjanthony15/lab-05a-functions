@@ -81,13 +81,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(testArray) {
-  let firstSum = sum(a, b)[0];
-  let secondSum = sum(c, firstSum)[0];
-  let message =  `${a}, ${b}, ${c} was passed in as an array of numbers, and` + secondSum + 'is their sum.';
-  console.log(message);
-
-
+function sumArray(sumArr) {
+  let totalSum = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
+  let message = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${totalSum} is their sum.`;
+  // console.log(message);
+  return [totalSum, message];
 } //eslint-disable-line
 
 
@@ -109,7 +107,6 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
